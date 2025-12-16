@@ -39,7 +39,7 @@ FIXED_AUDIO_SETTINGS_SCHEMA = cv.Schema(
     }
 )
 
-CONFIG_SCHEMA = media_player.MEDIA_PLAYER_SCHEMA.extend(
+CONFIG_SCHEMA = media_player._MEDIA_PLAYER_SCHEMA.extend(
     {
         cv.GenerateID(): cv.declare_id(ADFMediaPlayer),
         cv.Optional(CONF_ANNOUNCEMENT_AUDIO): FIXED_AUDIO_SETTINGS_SCHEMA,
